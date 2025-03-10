@@ -20,7 +20,7 @@ app.use("/api", router)
 
 
 app.use("/", (req, res) => {
-  res.json("get response");
+  res.json("hii all set here");
 });
 
 
