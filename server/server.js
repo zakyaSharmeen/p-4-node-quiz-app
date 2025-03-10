@@ -12,7 +12,17 @@ const app = express();
 
 
 app.use(morgan("tiny"));
-app.use(cors());
+app.use(
+    cors({
+    //   origin: "http://localhost:3000", 
+      origin:"https://p-4-node-quiz-app-v4j8.vercel.app", 
+      methods: ["GET", "POST", "PUT", "DELETE"], 
+    allowedHeaders: ["Content-Type", "Authorization"], 
+    credentials: true, 
+
+
+    })
+  );
 app.use(express.json());
 app.use("/api", router)
 // connect();
